@@ -77,8 +77,10 @@ class DetailScreen extends StatelessWidget {
                       children: [
                         Text(
                           propertyModel.title.toUpperCase(),
-                          style: const TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize:
+                                  propertyModel.title.length > 10 ? 20 : 15,
+                              fontWeight: FontWeight.bold),
                         ),
                         Text(
                           propertyModel.address,
@@ -90,8 +92,8 @@ class DetailScreen extends StatelessWidget {
                         provider.toggleWhishList(propertyModel);
                       },
                       child: Container(
-                        height: 56,
-                        width: 60,
+                        height: 60,
+                        width: 55,
                         decoration: BoxDecoration(
                           color: const Color(0xffEAF1FF),
                           borderRadius: BorderRadius.circular(12),
